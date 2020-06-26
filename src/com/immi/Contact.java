@@ -1,43 +1,54 @@
 package com.immi;
 
-public class Product {
+public class Contact {
 	private int id;
 	private String name;
-	private float price;
-	public Product() {
+	private String email;
+	
+	public Contact() {
 		
 	}
 	
-	public Product(int id) {
+	public Contact(int id) {
 		super();
 		this.id = id;
 	}
 	
-	public Product(int id, String name, float price) {
+	public Contact(int id, String name, String email) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.price = price;
+		this.email = email;
 	}
+	
 	public int getId() {
 		return id;
 	}
+	
 	public void setId(int id) {
 		this.id = id;
 	}
+	
 	public String getName() {
 		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
-	public float getPrice() {
-		return price;
-	}
-	public void setPrice(float price) {
-		this.price = price;
+	public String getemail() {
+		return email;
 	}
 	
+	public void setemail(String email) {
+		this.email = email;
+	}
+	
+	@Override
+	public String toString() {
+		return "Contact [id=" + id + ", name=" + name + ", email=" + email + "]";
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -45,6 +56,7 @@ public class Product {
 		result = prime * result + id;
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -53,7 +65,7 @@ public class Product {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Product other = (Product) obj;
+		Contact other = (Contact) obj;
 		if (id != other.id)
 			return false;
 		return true;
