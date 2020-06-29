@@ -54,8 +54,8 @@ class UI {
       <td>${contact.id}</td>
       <td>${contact.name}</td>
       <td>${contact.email}</td>
-      <td><div class="btn btn-outline-primary btn-sm edit">Edit</div></td>
-      <td><div class="btn btn-outline-danger btn-sm delete">Delete</div></td>
+      <td><div class="btn btn-outline-primary btn-sm edit">✏️</div></td>
+      <td><div class="btn btn-outline-danger btn-sm delete">🗑️</div></td>
     `;
     row.addEventListener("click", () => UI.actionDispatch(contact));
     list.appendChild(row);

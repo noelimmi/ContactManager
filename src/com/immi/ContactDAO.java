@@ -8,9 +8,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mysql.cj.log.Log;
-
-
 public class ContactDAO {
 	
 	Connection connection;
