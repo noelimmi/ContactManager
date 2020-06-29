@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Manager</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./overlay.css" />
+  </head>
+  <body>
+    <div class="container mt-4" id="mainBody">
+      <h1 class="display-4 text-center">
+        <i class="fa fa-address-book text-primary" aria-hidden="true"></i>
+        <span class="text-primary">Contact</span>Manager
+      </h1>
+      <!-- Alert comes here -->
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" class="form-control" />
+        </div>
+        <input
+          type="submit"
+          value="Add Contact"
+          class="btn btn-primary btn-block"
+        />
+      </form>
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="contact-list"></tbody>
+      </table>
+    </div>
+    <!-- The Modal -->
+    <div class="modal" id="editModel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Contact</h5>
+            <button type="button" class="close" onClick="UI.closeModel()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="editBody"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onClick="UI.editSubmitHandler()"
+            >
+              Save changes
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onClick="UI.closeModel()"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

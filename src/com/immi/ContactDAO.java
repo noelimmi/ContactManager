@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mysql.cj.log.Log;
+
 
 public class ContactDAO {
 	
@@ -29,8 +31,8 @@ public class ContactDAO {
 			while(rs.next()) {
 				Contact contact = new Contact();
 				contact.setId(rs.getInt("id"));
-				contact.setName(rs.getString("email"));
-				contact.setemail(rs.getString("name"));
+				contact.setemail(rs.getString("email"));
+				contact.setName(rs.getString("name"));
 				data.add(contact);
 			}
 			st.close();
@@ -55,8 +57,8 @@ public class ContactDAO {
 				return null;
 			}
 			contact.setId(rs.getInt("id"));
-			contact.setName(rs.getString("email"));
-			contact.setemail(rs.getString("name"));	
+			contact.setemail(rs.getString("email"));
+			contact.setName(rs.getString("name"));	
 			st.close();
 			connection.close();
 			return contact;
